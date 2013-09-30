@@ -5,12 +5,19 @@
 #include <SDL.h>
 #else
 #include <SDL2/SDL.h>
+#include <iostream>
+#include "player.h"
+#include "drawTex.h"
+#include "geometry.h"
+
 #endif
+
 
 // ============================================================================
 // [CApp]
 // ============================================================================
 // This is just a sample SDL application class to test that the app works.
+
 class CApp
 {
 public:
@@ -30,6 +37,13 @@ public:
 
 private:
 	
+    SDL_Surface* surface;
+    SDL_Texture* texture;
+    
+    //my objects
+    Player player;
+    Geometry geo;
+    
 	// Whether the application is running.
 	bool 			running;
 

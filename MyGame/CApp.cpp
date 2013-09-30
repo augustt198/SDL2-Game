@@ -2,14 +2,15 @@
 // [Include Section]
 // ============================================================================
 #include "CApp.h"
-
 // ============================================================================
 // [Defines & Constants]
 // ============================================================================
-#define APPTITLE 		"SDL2 Template Program"
+#define APPTITLE 		"Game"
 
-const int SCREEN_WIDTH 	= 800;
-const int SCREEN_HEIGHT	= 600;
+using namespace std;
+
+const int SCREEN_WIDTH 	= 1280;
+const int SCREEN_HEIGHT	= 720;
 
 
 CApp::CApp() :
@@ -34,12 +35,21 @@ int CApp::OnInit()
 							  SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
 							  SCREEN_WIDTH, SCREEN_HEIGHT, 
 							  SDL_WINDOW_SHOWN);
-
+    
 	if (window != NULL) {
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	}
+    
 	
-	// Success
+    surface = SDL_LoadBMP("res/player_rest.bmp");
+    if(surface == nullptr){
+        cout<<"Error loading image: "<<SDL_GetError()<<endl;
+    }
+    texture = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_FreeSurface(surface);
+    
+    
+	cout<<"Application succesfully launched!"<<endl;
 	return APP_OK;
 }
 
@@ -52,6 +62,7 @@ void CApp::OnCleanup()
 		SDL_DestroyWindow(window);
 	}
 
+    cout<<"Application succesfully quit!"<<endl;
 	SDL_Quit();
 }
 
@@ -93,6 +104,13 @@ void CApp::OnEvent(SDL_Event* event)
 			if (event->key.keysym.sym == SDLK_ESCAPE) {
 				running = false;
 			}
+            if(event->key.keysym.sym == SDLK_a){
+                player.move(2);
+            }
+            if(event->key.keysym.sym == SDLK_d){
+                player.move(1);
+            }
+        
 		default:
 			break;
 	}
@@ -107,7 +125,25 @@ void CApp::OnRender()
 {
 	SDL_RenderClear(renderer);
 
-	// Do your drawing here
+    //renderTex(renderer, SurfaceToTex(player.getPlayerSurface(), renderer));
+    //geo.draw(renderer);
+    
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
+    SDL_RenderClear( renderer );
+    
+    //Render red filled quad
+    SDL_Rect fillRect = { SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 };
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0x00, 0xFF );
+    SDL_RenderFillRect( renderer, &fillRect );
+    
+    //Render green outlined quad
+    SDL_Rect outlineRect = { SCREEN_WIDTH / 6, SCREEN_HEIGHT / 6, SCREEN_WIDTH * 2 / 3, SCREEN_HEIGHT * 2 / 3 };
+    SDL_SetRenderDrawColor( renderer, 0x00, 0xFF, 0x00, 0xFF );
+    SDL_RenderDrawRect( renderer, &outlineRect );
+    
+    //Draw blue horizontal line
+    SDL_SetRenderDrawColor( renderer, 0x00, 0x00, 0xFF, 0xFF );
+    SDL_RenderDrawLine( renderer, 0, SCREEN_HEIGHT / 2, SCREEN_WIDTH, SCREEN_HEIGHT / 2 );
 	
 	SDL_RenderPresent(renderer);
 }
