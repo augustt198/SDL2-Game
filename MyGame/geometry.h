@@ -12,22 +12,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
-class Geometry {
-    
-private:
-    
-    
-public:
-    
-    //construct / destruct
-    Geometry();
-    ~Geometry();
-    
-    //methods
-    void prepare(SDL_Renderer* render);
-    void draw(SDL_Renderer* render);
-    
-};
+void geoTest(SDL_Renderer* renderer);
 
 #endif /* defined(__MyGame__geometry__) */
 

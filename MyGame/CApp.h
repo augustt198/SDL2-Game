@@ -42,7 +42,6 @@ private:
     
     //my objects
     Player player;
-    Geometry geo;
     
 	// Whether the application is running.
 	bool 			running;
