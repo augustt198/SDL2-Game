@@ -126,9 +126,7 @@ void CApp::OnRender()
 	SDL_RenderClear(renderer);
 
     //renderTex(renderer, SurfaceToTex(player.getPlayerSurface(), renderer));
-    //geo.draw(renderer);
     
-    geoTest(renderer);
 	
 	SDL_RenderPresent(renderer);
 }
