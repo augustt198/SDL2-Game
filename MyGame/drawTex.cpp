@@ -16,3 +16,8 @@ SDL_Texture* SurfaceToTex(SDL_Surface* surface, SDL_Renderer* render){
 void renderTex(SDL_Renderer *render, SDL_Texture *texture){
     SDL_RenderCopy(render, texture, NULL, NULL);
 }
+
+void renderSurface(SDL_Renderer* render, SDL_Surface* surface){
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(render, surface);
+    SDL_RenderCopy(render, texture, NULL, NULL);
+}

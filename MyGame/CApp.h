@@ -4,12 +4,12 @@
 #ifdef _WIN32
 #include <SDL.h>
 #else
-#include <SDL2/SDL.h>
+#include <SDL2/SDL.h> //---------| includes start |----------->>
 #include <iostream>
 #include "player.h"
 #include "drawTex.h"
 #include "geometry.h"
-
+#include "viewport.h" //---------| includes stop |------------>>
 #endif
 
 

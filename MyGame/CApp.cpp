@@ -125,7 +125,9 @@ void CApp::OnRender()
 {
 	SDL_RenderClear(renderer);
 
-    //renderTex(renderer, SurfaceToTex(player.getPlayerSurface(), renderer));
+    renderSurface(renderer, player.getPlayerSurface());
+    
+    setViewport(createViewport(400, 400, 100, 100), renderer);
     
 	
 	SDL_RenderPresent(renderer);

@@ -15,6 +15,7 @@
 		97D0839117F63FAB00456A41 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D0838F17F63FAB00456A41 /* player.cpp */; };
 		97D0839517F7740100456A41 /* drawTex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D0839317F7740100456A41 /* drawTex.cpp */; };
 		97D264A517F929C0008A1081 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D264A317F929C0008A1081 /* geometry.cpp */; };
+		97D264AA17FA3C0E008A1081 /* viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D264A817FA3C0E008A1081 /* viewport.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		97D0839417F7740100456A41 /* drawTex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawTex.h; sourceTree = "<group>"; };
 		97D264A317F929C0008A1081 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
 		97D264A417F929C0008A1081 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
+		97D264A817FA3C0E008A1081 /* viewport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewport.cpp; sourceTree = "<group>"; };
+		97D264A917FA3C0E008A1081 /* viewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 			children = (
 				97D0839317F7740100456A41 /* drawTex.cpp */,
 				97D0839417F7740100456A41 /* drawTex.h */,
+				97D264A817FA3C0E008A1081 /* viewport.cpp */,
+				97D264A917FA3C0E008A1081 /* viewport.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				97D0839117F63FAB00456A41 /* player.cpp in Sources */,
 				97D264A517F929C0008A1081 /* geometry.cpp in Sources */,
 				97D0839517F7740100456A41 /* drawTex.cpp in Sources */,
+				97D264AA17FA3C0E008A1081 /* viewport.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

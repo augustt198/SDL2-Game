@@ -16,5 +16,6 @@ SDL_Texture* SurfaceToTex(SDL_Surface* mSurface, SDL_Renderer* mRender);
     
 void renderTex(SDL_Renderer* render, SDL_Texture* texture);
 
+void renderSurface(SDL_Renderer* render, SDL_Surface* surface);
 
 #endif /* defined(__MyGame__drawTex__) */
