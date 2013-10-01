@@ -26,3 +26,4 @@ SDL_Rect createViewport(int x, int y, int w, int h);
 void setViewport(SDL_Rect viewport, SDL_Renderer* render);
 
 #endif /* defined(__MyGame__viewport__) */
+

@@ -9,9 +9,14 @@
 
 using namespace std;
 
+
+//vars
 const int SCREEN_WIDTH 	= 1280;
 const int SCREEN_HEIGHT	= 720;
-
+int viewportX = 0;
+int rest = 0;
+bool moveleft;
+bool moveright;
 
 CApp::CApp() :
 	running(false)
@@ -105,10 +110,10 @@ void CApp::OnEvent(SDL_Event* event)
 				running = false;
 			}
             if(event->key.keysym.sym == SDLK_a){
-                player.move(2);
+                //--(A)--KEY--EVENT-->
             }
             if(event->key.keysym.sym == SDLK_d){
-                player.move(1);
+                //--(D)--KEY-EVENT-->
             }
         
 		default:
@@ -118,7 +123,7 @@ void CApp::OnEvent(SDL_Event* event)
 
 void CApp::OnUpdate()
 {
-	// Update your game logic here
+    
 }
 
 void CApp::OnRender()
@@ -128,7 +133,6 @@ void CApp::OnRender()
     renderSurface(renderer, player.getPlayerSurface());
     
     setViewport(createViewport(400, 400, 100, 100), renderer);
-    
 	
 	SDL_RenderPresent(renderer);
 }
