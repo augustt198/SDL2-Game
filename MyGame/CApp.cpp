@@ -14,7 +14,9 @@ using namespace std;
 const int SCREEN_WIDTH 	= 1280;
 const int SCREEN_HEIGHT	= 720;
 int viewportX = 0;
+int viewportY = 0;
 int rest = 0;
+int speed = 5;
 bool moveleft;
 bool moveright;
 
@@ -110,10 +112,24 @@ void CApp::OnEvent(SDL_Event* event)
 				running = false;
 			}
             if(event->key.keysym.sym == SDLK_a){
-                //--(A)--KEY--EVENT-->
+                viewportX = viewportX - speed;
             }
             if(event->key.keysym.sym == SDLK_d){
-                //--(D)--KEY-EVENT-->
+                viewportX = viewportX + speed;
+            }
+            if(event->key.keysym.sym == SDLK_w){
+                viewportY = viewportY + speed;
+            }
+            if(event->key.keysym.sym == SDLK_s){
+                viewportY = viewportY - speed;
+            }
+            if(event->key.keysym.sym == SDLK_z){
+                speed--;
+                cout<<speed<<endl;
+            }
+            if(event->key.keysym.sym == SDLK_x){
+                speed++;
+                cout<<speed<<endl;
             }
         
 		default:
@@ -132,7 +148,7 @@ void CApp::OnRender()
 
     renderSurface(renderer, player.getPlayerSurface());
     
-    setViewport(createViewport(400, 400, 100, 100), renderer);
+    setViewport(createViewport(viewportX, viewportY, 100, 100), renderer);
 	
 	SDL_RenderPresent(renderer);
 }
