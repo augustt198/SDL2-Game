@@ -7,7 +7,7 @@
 #include <SDL2/SDL.h> //---------| includes start |----------->>
 #include <iostream>
 #include "player.h"
-#include "drawTex.h"
+#include "renderUtils.h"
 #include "geometry.h"
 #include "viewport.h" //---------| includes stop |------------>>
 #endif

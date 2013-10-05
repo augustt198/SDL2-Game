@@ -13,12 +13,7 @@ using namespace std;
 //vars
 const int SCREEN_WIDTH 	= 1280;
 const int SCREEN_HEIGHT	= 720;
-int viewportX = 0;
-int viewportY = 0;
-int rest = 0;
-int speed = 5;
-bool moveleft;
-bool moveright;
+
 
 CApp::CApp() :
 	running(false)
@@ -46,14 +41,6 @@ int CApp::OnInit()
 	if (window != NULL) {
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	}
-    
-	
-    surface = SDL_LoadBMP("res/player_rest.bmp");
-    if(surface == nullptr){
-        cout<<"Error loading image: "<<SDL_GetError()<<endl;
-    }
-    texture = SDL_CreateTextureFromSurface(renderer, surface);
-    SDL_FreeSurface(surface);
     
     
 	cout<<"Application succesfully launched!"<<endl;
@@ -111,26 +98,7 @@ void CApp::OnEvent(SDL_Event* event)
 			if (event->key.keysym.sym == SDLK_ESCAPE) {
 				running = false;
 			}
-            if(event->key.keysym.sym == SDLK_a){
-                viewportX = viewportX - speed;
-            }
-            if(event->key.keysym.sym == SDLK_d){
-                viewportX = viewportX + speed;
-            }
-            if(event->key.keysym.sym == SDLK_w){
-                viewportY = viewportY + speed;
-            }
-            if(event->key.keysym.sym == SDLK_s){
-                viewportY = viewportY - speed;
-            }
-            if(event->key.keysym.sym == SDLK_z){
-                speed--;
-                cout<<speed<<endl;
-            }
-            if(event->key.keysym.sym == SDLK_x){
-                speed++;
-                cout<<speed<<endl;
-            }
+            
         
 		default:
 			break;
@@ -140,15 +108,14 @@ void CApp::OnEvent(SDL_Event* event)
 void CApp::OnUpdate()
 {
     
+    
 }
 
 void CApp::OnRender()
 {
 	SDL_RenderClear(renderer);
 
-    renderSurface(renderer, player.getPlayerSurface());
-    
-    setViewport(createViewport(viewportX, viewportY, 100, 100), renderer);
+    setViewport(createViewport(400, 400, 100, 100), renderer);
 	
 	SDL_RenderPresent(renderer);
 }
