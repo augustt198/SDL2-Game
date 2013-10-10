@@ -23,4 +23,5 @@ void renderSurface(SDL_Renderer* render, SDL_Surface* surface);
 
 SDL_Texture* loadTexture(string path, SDL_Renderer* renderer);
 
+
 #endif /* defined(__MyGame__renderUtils__) */

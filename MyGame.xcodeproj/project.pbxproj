@@ -10,13 +10,14 @@
 		9718E97E17FF688B00AFC5A9 /* elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9718E97C17FF688B00AFC5A9 /* elements.cpp */; };
 		9718E98017FFAE4000AFC5A9 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9718E97F17FFAE4000AFC5A9 /* SDL2_image.framework */; };
 		971F5C3818005C0F00DA5318 /* renderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971F5C3618005C0F00DA5318 /* renderUtils.cpp */; };
+		971F5C3D1805E5C900DA5318 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971F5C3B1805E5C900DA5318 /* texture.cpp */; };
+		971F5C411805EA8300DA5318 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971F5C3F1805EA8300DA5318 /* log.cpp */; };
 		97306A0917F27090003989BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97306A0817F27090003989BE /* Cocoa.framework */; };
 		97306A0B17F27090003989BE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97306A0A17F27090003989BE /* SDL2.framework */; };
 		97306A0E17F27090003989BE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97306A0D17F27090003989BE /* main.cpp */; };
 		97306A1317F27090003989BE /* CApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97306A1217F27090003989BE /* CApp.cpp */; };
 		97D0838E17F5A2D400456A41 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 97D0838D17F5A2D400456A41 /* res */; };
 		97D0839117F63FAB00456A41 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D0838F17F63FAB00456A41 /* player.cpp */; };
-		97D264A517F929C0008A1081 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D264A317F929C0008A1081 /* geometry.cpp */; };
 		97D264AA17FA3C0E008A1081 /* viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D264A817FA3C0E008A1081 /* viewport.cpp */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,10 @@
 		9718E97F17FFAE4000AFC5A9 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		971F5C3618005C0F00DA5318 /* renderUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderUtils.cpp; sourceTree = "<group>"; };
 		971F5C3718005C0F00DA5318 /* renderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderUtils.h; sourceTree = "<group>"; };
+		971F5C3B1805E5C900DA5318 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		971F5C3C1805E5C900DA5318 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		971F5C3F1805EA8300DA5318 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
+		971F5C401805EA8300DA5318 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
 		97306A0517F27090003989BE /* MyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97306A0817F27090003989BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		97306A0A17F27090003989BE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/../../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = DEVELOPER_DIR; };
@@ -46,8 +51,6 @@
 		97D0838D17F5A2D400456A41 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		97D0838F17F63FAB00456A41 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		97D0839017F63FAB00456A41 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
-		97D264A317F929C0008A1081 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
-		97D264A417F929C0008A1081 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
 		97D264A817FA3C0E008A1081 /* viewport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewport.cpp; sourceTree = "<group>"; };
 		97D264A917FA3C0E008A1081 /* viewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,10 +83,17 @@
 			children = (
 				97D264A917FA3C0E008A1081 /* viewport.h */,
 				97D264A817FA3C0E008A1081 /* viewport.cpp */,
-				97D264A417F929C0008A1081 /* geometry.h */,
-				97D264A317F929C0008A1081 /* geometry.cpp */,
 			);
 			name = tests;
+			sourceTree = "<group>";
+		};
+		971F5C3E1805EA7300DA5318 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				971F5C3F1805EA8300DA5318 /* log.cpp */,
+				971F5C401805EA8300DA5318 /* log.h */,
+			);
+			name = Debug;
 			sourceTree = "<group>";
 		};
 		973069FB17F27090003989BE = {
@@ -117,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				97306A0D17F27090003989BE /* main.cpp */,
+				971F5C3E1805EA7300DA5318 /* Debug */,
 				971F5C3918005D2B00DA5318 /* tests */,
 				9718E97B17FF682400AFC5A9 /* UI */,
 				97D0839217F773E100456A41 /* Engine */,
@@ -130,8 +141,8 @@
 		97306A0F17F27090003989BE /* include */ = {
 			isa = PBXGroup;
 			children = (
-				97306A1017F27090003989BE /* CApp.h */,
 				97D0839017F63FAB00456A41 /* player.h */,
+				97306A1017F27090003989BE /* CApp.h */,
 			);
 			name = include;
 			sourceTree = "<group>";
@@ -150,6 +161,8 @@
 			children = (
 				971F5C3618005C0F00DA5318 /* renderUtils.cpp */,
 				971F5C3718005C0F00DA5318 /* renderUtils.h */,
+				971F5C3B1805E5C900DA5318 /* texture.cpp */,
+				971F5C3C1805E5C900DA5318 /* texture.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -219,9 +232,10 @@
 			files = (
 				971F5C3818005C0F00DA5318 /* renderUtils.cpp in Sources */,
 				97306A0E17F27090003989BE /* main.cpp in Sources */,
+				971F5C411805EA8300DA5318 /* log.cpp in Sources */,
 				97306A1317F27090003989BE /* CApp.cpp in Sources */,
 				97D0839117F63FAB00456A41 /* player.cpp in Sources */,
-				97D264A517F929C0008A1081 /* geometry.cpp in Sources */,
+				971F5C3D1805E5C900DA5318 /* texture.cpp in Sources */,
 				9718E97E17FF688B00AFC5A9 /* elements.cpp in Sources */,
 				97D264AA17FA3C0E008A1081 /* viewport.cpp in Sources */,
 			);

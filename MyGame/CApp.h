@@ -8,7 +8,7 @@
 #include <iostream>
 #include "player.h"
 #include "renderUtils.h"
-#include "geometry.h"
+#include "texture.h"
 #include "viewport.h" //---------| includes stop |------------>>
 #endif
 

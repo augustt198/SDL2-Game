@@ -13,6 +13,11 @@ using namespace std;
 //vars
 const int SCREEN_WIDTH 	= 1280;
 const int SCREEN_HEIGHT	= 720;
+SDL_Rect SpriteClip;
+Texture spriteSheetTexture;
+
+
+
 
 
 CApp::CApp() :
@@ -41,6 +46,13 @@ int CApp::OnInit()
 	if (window != NULL) {
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	}
+    
+    spriteSheetTexture.setTex(loadTexture("/res/player_rest.bmp", renderer));
+    
+    SpriteClip.x = 0;
+    SpriteClip.y = 0;
+    SpriteClip.w = 75;
+    SpriteClip.h = 75;
     
     
 	cout<<"Application succesfully launched!"<<endl;
@@ -115,7 +127,9 @@ void CApp::OnRender()
 {
 	SDL_RenderClear(renderer);
 
-    setViewport(createViewport(400, 400, 100, 100), renderer);
+    //setViewport(createViewport(400, 400, 100, 100), renderer);
+    
+    spriteSheetTexture.render( 200, 200, &SpriteClip, renderer);
 	
 	SDL_RenderPresent(renderer);
 }
